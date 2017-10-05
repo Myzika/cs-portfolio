@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My week at a Glance</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <!-- This allows the menu to actually drop down when the three lines are clicked on. -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="www.wikipedia.com"><img class="logo" src="https://vignette3.wikia.nocookie.net/dyinglight/images/2/29/Wikipedia_Cite.png/revision/latest?cb=20141209021635" height="23"></a>
+        <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=14&cad=rja&uact=8&ved=0ahUKEwjfheCg3tXWAhURz2MKHR1uDCQQFghsMA0&url=http%3A%2F%2Fwww.thesearchenginelist.com%2F&usg=AOvVaw31U2zGLq9QaKIxugl1WoIK">Resources</a>
+        <a href="www.google.com">Google</a>
+        <a href="www.yahoo.com">Yahoo</a>
+        <a href="www.bing.com">Bing</a>
+        <a href="www.baidu.com">Baidu</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    <h1>My Week at a Glance</h1>
+    <div style="overflow-x:auto;">
+        <table>
+            <tr>
+                <th class="day"></th>
+                <th class="day">Sunday</th>
+                <th class="day">Monday</th>
+                <th class="day">Tuesday</th>
+                <th class="day">Wednesday</th>
+                <th class="day">Thursday</th>
+                <th class="day">Friday</th>
+                <th class="day">Saturday</th>
+            </tr>
+            <tr>
+                <td class="class">History</td>
+                <td>Finish History Checkpoints.</td>
+                <td>Take Notes for History.</td>
+                <td>Write Paragraphs.</td>
+                <td>Watch the assigned videos.</td>
+                <td>Finish up the project.</td>
+                <td>Take 2 playlists.</td>
+                <td>Sleep all day!</td>
+            </tr>
+            <tr>
+                <td class="class">English</td>
+                <td>Finish the Essay</td>
+                <td>Proofread the creative writing.</td>
+                <td>Study for the playlists.</td>
+                <td>Do research and write down quotes.</td>
+                <td>Read Chapters 1-4.</td>
+                <td>Finish the Pre-Writing Task.</td>
+                <td>Sleep all day!</td>
+            </tr>
+            <tr>
+                <td class="class">Spanish</td>
+                <td>Study the vocabulary.</td>
+                <td>Copy all of the vocabulary.</td>
+                <td>Start working on the second checkpoint.</td>
+                <td>Study for the practice assessment.</td>
+                <td>Review the results from the practice assessment.</td>
+                <td>Grammar check the folleto.</td>
+                <td>Sleep all day!</td>
+            </tr>
+            <tr>
+                <td class="class">Math</td>
+                <td>Practice the problems.</td>
+                <td>Review the concept units that are on the test.</td>
+                <td>Take notes for the Logarithm Properties and Functions playlist.</td>
+                <td>Prepare for the assessment in-class.</td>
+                <td>Finish the math checkpoint.</td>
+                <td>Finish the math assignment.</td>
+                <td>Sleep all day!</td>
+            </tr>
+            <tr>
+                <td class="class">Physics</td>
+                <td>Re-do the experiment.</td>
+                <td>Start turning the data into table and graphs.</td>
+                <td>Write the analysis for the tables and graphs.</td>
+                <td>Start creating Energy Models.</td>
+                <td>Finish the Energy Models.</td>
+                <td>Do the Energy Explanation and the Reflection.</td>
+                <td>Sleep all day!</td>
+            </tr>
+        </table>
+    </div>
+    <div style="float: left; width: 50%;">
+        <h3>To-Do List</h3>
+        <ol>
+            <li>Do my Spanish Vocabulary.</li>
+            <li>Do my History Paragraphs.</li>
+            <li>Write the English essay.</li>
+            <li>Finish the Physics Presentation.</li>
+            <li>Study for the Math Test.</li>
+            <li>Sleep a lot.</li>
+        </ol>
+    </div>
+    <div style="float: right; width: 50%;">
+        <h3>Playlists to Finish</h3>
+        <ol>
+            <li>Knowledge of Words 10</li>
+            <li>Totalitarian Governments: Rise of Hitler</li>
+            <li>Preterit 2</li>
+            <li>Trigonometric Functions</li>
+            <li>First/Second Law of Thermodynamics</li>
+            <li>CSS 1</li>
+            <li>Programming Concepts</li>
+        </ol>
+    </div>
+    <div class="blankspace">
+    </div>
+    <footer>
+        <h3>And that's all for the week!</h3>
+    </footer>
+    <br />
+    <h1 class="rainbow">Have a good day!</h1>
+</body>
+
+</html>

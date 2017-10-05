@@ -1,0 +1,72 @@
+        h1 {
+            color: white;
+            font-family: Garamond;
+        }
+
+        h2 {
+            color: white;
+            font-family: Garamond;
+            text-align: center;
+        }
+
+        h3 {
+            color: white;
+            font-family: "Georgia";
+        }
+
+        li {
+            color: white;
+        }
+        
+        style> {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            background: url("http://www.planwallpaper.com/static/images/6790904-free-background-wallpaper.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        span {
+            color: lightblue;
+        }
+
+        p {
+            color: lightgrey;
+            font-family: 'Bookman Old Style';
+        }
+
+        a:link {
+            color: orange;
+            text-decoration: bold;
+        }
+
+        a:visited {
+            color: red;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: darkorange;
+            text-decoration: none;
+        }
+
+        .footer {
+            padding: 10px;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .list {
+            color: white;
+            font-family: Garamond;
+            font-size: 25px;
+        }
+
+        img {
+            border-radius: 8px;
+            border: solid 2px white;
+        }
