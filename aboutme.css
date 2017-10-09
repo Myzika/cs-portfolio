@@ -1,0 +1,19 @@
+
+
+html {
+    background: url("https://i.imgur.com/Nbi7bYI.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.text {
+    color: black;
+    text-align: justify;
+    font-family: Georgia;
+    padding: 2px;
+}
+#genderqueer {
+    display: block;
+    margin: 10px;
+    float:left;
+    padding:1px;
+}

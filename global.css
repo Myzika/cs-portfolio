@@ -1,0 +1,38 @@
+
+
+.links {
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    background-color: darkblue;
+}
+
+.main {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+
+
+.header {
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    font-style: normal;
+    font-family: impact;
+}
+
+.body {
+    color: white;
+}
+
