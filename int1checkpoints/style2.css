@@ -15,7 +15,7 @@
       background-color: blue;
   }
 
-  style> {
+  style > * {
       margin: 0;
       padding: 0;
   }
@@ -151,4 +151,3 @@
           color: blue;
       }
   }
-  
