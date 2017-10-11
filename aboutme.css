@@ -1,7 +1,5 @@
-
-
 html {
-    background: url("https://i.imgur.com/Nbi7bYI.jpg") no-repeat center center fixed;
+    background: url("https://image.freepik.com/free-vector/abstract-background-with-a-blue-watercolor-texture_1048-2242.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -11,9 +9,15 @@ html {
     font-family: Georgia;
     padding: 2px;
 }
+
 #genderqueer {
     display: block;
     margin: 10px;
-    float:left;
-    padding:1px;
+    float: left;
+    padding: 1px;
+}
+
+#music {
+    display: block;
+    margin: auto;
 }

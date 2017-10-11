@@ -1,4 +1,7 @@
-
+html {
+    background: url("https://image.freepik.com/free-vector/abstract-background-with-a-blue-watercolor-texture_1048-2242.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
 
 .links {
     background-color: blue;
@@ -7,25 +10,24 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    transition: all 0.5s ease;
+    border-radius: 6px;
 }
 
-a:hover,
-a:active {
+a:hover {
     background-color: darkblue;
 }
 
 .main {
     margin: auto;
     width: 50%;
-    padding: 10px;
     text-align: center;
-    color: white;
 }
 
 
 
 .header {
-    color: white;
+    color: black;
     font-size: 38px;
     font-weight: bold;
     font-style: normal;
@@ -36,3 +38,30 @@ a:active {
     color: white;
 }
 
+.rainbow {
+    text-align: center;
+    font-family: 'Open Sans';
+    animation: rainbow 1.5s infinite;
+}
+.rainbow2 {
+    font-family: 'Open Sans';
+    animation: rainbow 1.5s infinite;
+}
+
+@keyframes rainbow {
+    20% {
+        color: red;
+    }
+    40% {
+        color: orange;
+    }
+    60% {
+        color: yellow;
+    }
+    80% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}

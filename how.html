@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="global.css" type="text/css" />
     <link rel="stylesheet" href="how.css" type="text/css" />
     <link rel="stylesheet" href="navbar.css" type="text/css" />
-
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 </head>
+
 <body>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <nav>
         <div class="icon-bar" id="myTopnav">
             <a class="active" href="index.html"><i class="fa fa-home"></i></a>
@@ -21,19 +23,208 @@
             <a href="more.html"><i class="fa fa-plus"></i></a>
         </div>
     </nav>
-            <h2>How was this all made?</h2>
-            <h5>That is a good question! This page will explain how I put this site together.</h5>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
-<script>
-$('.smooth').on('click', function() {
-    $.smoothScroll({
-        scrollElement: $('body'),
-        scrollTarget: '#' + this.id
-    });
-    
-    return false;
-});
-</script>
-        </body>
+    <h2>How was this all made?</h2>
+    <h4 id="top">That is a good question! This page will explain how I put this site together.</h4>
+    <p>This website has 5 pages: Home, About Me, What I've Learned, How It's Made, and More. The site is navigatable through the navigation bar at the top of the page.</p>
+
+    <h3>How the background was made: </h3>
+    <ul>
+        <li>
+            First, I used the html selector in order to select the whole page.
+            <ul>
+                <li>
+                    It is possible to use the universal selector, but the universal selector is known to be slow, so we are using the html selector, which has much of the same effect.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Then, I went to the internet and I found the image that I wanted and took the URL.
+            <ul>
+                <li>
+                    Make sure that you copy the image address and not the image itself.
+                </li>
+                <li>
+                    I used a lighter colored background to allow the text to be seen clearly. If a darker color background is used, a white font may be more advantageous.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Next, right after the html selector, I set the key as background and the value as url.
+        </li>
+        <li>
+            I added parentheses after the url value and added the link to my chosen image.
+        </li>
+        <li>
+            After this, in order to center my image and to make the image fill the whole page, I used the no-repeat value, two center values, and a fixed value so that it would appear to stay in place while everything else moved.
+            <ul>
+                <li>
+                    I chose to do this so that the background looked static and so that it did not distract from the text. I centered it so that the whole image is utilized, and I used no-repeat so that there is only one image and not a collage of images.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Finally, I used the background-size selector to change the image to the size of cover.
+            <ul>
+                <li>
+                    I did this so that the image size filled the page and the whole area was covered.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    </li>
+    </ul>
+    <img src="https://image.prntscr.com/image/UWy5esSbRgyzRF67CYeibg.png" width="90%" />
+    <h3>How the navigation bar was made:</h3>
+    <ul>
+        <li>
+            The first thing I did was create a seperate CSS spreadsheet for the navigation bar's styling.
+            <ul>
+                <li>
+                    I did this because I needed to link this CSS file to all of the pages and I didn't want to accidently carry over formatting from a different page. Additionally, I wanted to be able to clearly work on the navigation bar and having a seperate file meant
+                    that I knew that all of the CSS in that file correlated with the navigation bar.
+                </li>
+            </ul>
+        </li>
+        <li>
+            The next thing I did was I added a division in my html at the top of the page. Within this division, I added five anchor text with hypertext references, each of which correlated with a different part of my website.
+            <ul>
+                <li>
+                    Note: These links were added on their own, only within the div tags. They were not added to a list.
+                </li>
+            </ul>
+        </li>
+        <li>
+            I gave the entire divison the class of icon-bar, which I then utilized in the CSS document. The first thing that I did was give the entire div the background-color of Davy's Grey (#555).
+            <ul>
+                <li>
+                    I chose this color because it was neutral, yet dark enough to be seen. I chose to use the class of icon-bar because that was the name of the element that I was working on.
+                </li>
+            </ul>
+        </li>
+        <li>
+            The next thing that I did was I selected the anchors within the divison. I floated these to the left, center-aligned the text, gave each link a width of 20% of the page, gave them all a padding of 12px, added a transition of ease which lasts .3 seconds,
+            made the text white, and changed the font size to 36px.
+            <ul>
+                <li>
+                    Giving each link a width of 20% of the page means that they each took up 1/5th of the page, and therefore, that we could add 5 links. Depending on the need of the person, you could use different percentages, but in this website, I went with 5.
+                </li>
+            </ul>
+        </li>
+        <li>
+            I then went back to the HTML and I chose a font with icons. I linked the font and changed each link's name to the icon that I thought fit best.
+            <ul>
+                <li>
+                    I chose to use a house for the homepage, a child with their hands up for the about me page, a book for the what i've learned page, a question mark for this page, and a plus sign for the 'and more' page. I simply chose these because I felt that these represented
+                    the topics in those pages the best.
+                </li>
+                <li>
+                    I chose to use icons because I felt that they were the most universal, and I felt that they looked nice while still having navigability.
+                </li>
+            </ul>
+        </li>
+        <li>
+            I then changed the color of the icon when you hover over it. I changed it so that when the button was hovered over, the background would become black.
+            <ul>
+                <li>
+                    I chose to do this as so to differentiate between a hovered-over link and one that wasn't. It adds clarity to the webpage, and makes it obvious which link is about to be clicked on.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Then, I changed the background color for the home button.
+            <ul>
+                <li>
+                    I did this because the homepage is where one starts when they enter the website, and should be marked clearly.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Finally, I added navigation tags around the html.
+            <ul>
+                <li>
+                    This was done to make navigation easier for those using screen readers and alternate displays.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="code">
+        <img id="hor" src="https://image.prntscr.com/image/SiHMTZuhRimwEYCtm2xFgA.png" width="60%" />
+        <br />
+        <img id="vertical" src="https://image.prntscr.com/image/u2Hrgwv0Qo2lVBUlWTfOSg.png" width="40%" />
+    </div>
+    <h3>How the buttons on the homepage were made:</h3>
+    <ul>
+        <li>
+            The first thing that I needed to do in order to create the buttons on the homepage was to add the desired links inside of division tags.
+            <ul>
+                <li>
+                    While many people use unordered lists to make clickable buttons, I choose to use division tags because it is simpler and less cluttered, and it has the same effect. However, using list tags would be useful for those who need it for organization.
+                </li>
+            </ul>
+        </li>
+        <li>
+            The second thing that I needed to do was to give the division tag the class of main. I gave the links the class of "links" and I gave the header the class of "header".
+            <ul>
+                <li>
+                    I chose names like these because it helps me when I code the CSS to know exactly what I am working on. This also prevents accidental additions to the wrong element when going back to make changes.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Next, I began adding the CSS. The first thing that I did was give the links background colors of blue and text colors of white. I padded them using 14 pixels and 20 pixels, and I aligned the text in the center. Then, I removed the text decoration and
+            I gave them the display property of inline-block.
+            <ul>
+                <li>
+                    This gives each individual link the colors and the background. This was important because I wanted buttons, not just one massive blue color.
+                </li>
+            </ul>
+        </li>
+        <li>
+            The next thing that I did was I changed the background color to be dark blue when it was hovered over. I also added a transition at this point.
+            <ul>
+                <li>
+                    I chose to add an animation to the buttons in order to give it a smoother and cleaner look. I kept with the color scheme and made the button turn dark blue when hovered over in order to prevent the buttons from looking too garish.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Now, I wanted to center the elements inside of the div, so I gave the division a margin of auto, meaning that the div itself centered in the page. Then I gave it a width of 50%, which means that the sides were 25% of the page. I aligned the text in the
+            center and my buttons themselves were done.
+            <ul>
+                <li>
+                    I chose to center the entire division, but one could easily chose to center the links themselves instead. Additionally, I chose to make the button take up 50% of the page because I felt that this was what gave them the most balance, but you can do whatever
+                    you feel is best.
+                </li>
+            </ul>
+        </li>
+        <li>
+           I realized that the buttons were now so close to each other than they looked like one big button. Therefore, I added breaks before and after each button. 
+           <ul>
+               <li>
+                   I chose to use two breaks in between each button because I thought that was the optimal spacing for my webpage.
+               </li>
+           </ul>
+        </li>
+    </ul>
+    <h3 class="rainbow2">How I made the rainbow animation:</h3>
+    <ul>
+        <li>
+            The first thing that I did was give a header the class of rainbow.
+            <ul>
+                <li>
+                    You can use any class name, but I chose to use rainbow because that was what my animation was.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Then, I changed the font to be Open Sans, and I hooked up the animation. To do that, I stated the name of my animation, which was 'rainbow', changed the time of duration to be 1.5s, and I set it to run infinitely.
+            <ul>
+                <li>
+                    I picked the font that I did because it's easy to read and it's clean. I named my animation 'rainbow' because that is what it was, and I wanted a clear name. I chose the durawtion of 1.5 seconds after a lot of trial and errer, and I realized that 1.5 seconds would be fast enough for it look interesting, but slow enough for all the colors to be seen. I needed to set it to run infinitely because it needed to run forever
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
 </html>

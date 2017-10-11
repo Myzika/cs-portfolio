@@ -1,0 +1,17 @@
+html {
+    background: url("https://image.freepik.com/free-vector/abstract-background-with-a-blue-watercolor-texture_1048-2242.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+img {
+    display: block;
+    margin: auto;
+}
+html {
+    font-family: "open sans";
+}
+h2 {
+    font-family: sans-serif;
+}
+#top {
+    font-family: sans-serif;
+}

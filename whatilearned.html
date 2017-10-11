@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="global.css" type="text/css" />
     <link rel="stylesheet" href="whatilearned.css" type="text/css" />
     <link rel="stylesheet" href="navbar.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 </head>
 
 <body>
@@ -47,9 +48,10 @@
     </ul>
     <h2>CSS Things That I Have Learned</h2>
     <ul>
-        <li>.class, #id</li>
+        <li>.class, #id, *universal</li>
         <li>html&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;url(&quot;https://i.imgur.com/Nbi7bYI.jpg&quot;)&nbsp;no-repeat&nbsp;center&nbsp;center&nbsp;fixed;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-size:&nbsp;cover;<br/>}<br/></li>
-        <li>.text { <br />&nbsp;&nbsp;&nbsp;&nbsp; color: <span id="green">green</span>; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: left; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-family: <span id="Garamond">Garamond</span>; <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: <span id="size">30px</span>; <br/> } </li>
+        <li>.text { <br />&nbsp;&nbsp;&nbsp;&nbsp; color: <span id="green">green</span>; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: left; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-family: <span id="Garamond">Garamond</span>; <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size:
+            <span id="size">30px</span>; <br/> } </li>
         <li>.icon-bar&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;100%;<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#555;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;auto;&nbsp;<br/>}</li>
         <li>.icon-bar&nbsp;a&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;left;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;20%;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;12px&nbsp;0;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;all&nbsp;0.3s&nbsp;ease;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;white;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;36px;<br/>}</li>
         <li>.icon-bar&nbsp;a:hover&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#000;&nbsp;<br/>}</li>
@@ -60,7 +62,8 @@
         <li>@keyframes&nbsp;rainbow&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20%&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;red;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40%&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;orange;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60%&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;yellow;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;80%&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;green;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;blue;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;}</li>
     </ul>
     <h2>JavaScript Things That I Have Learned</h2>
-        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;myFunction()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;x&nbsp;=&nbsp;document.getElementById(&quot;myTopnav&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(x.className&nbsp;===&nbsp;&quot;topnav&quot;)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x.className&nbsp;+=&nbsp;&quot;&nbsp;responsive&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x.className&nbsp;=&nbsp;&quot;topnav&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</li>
-        <li></li>
+    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;myFunction()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;x&nbsp;=&nbsp;document.getElementById(&quot;myTopnav&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(x.className&nbsp;===&nbsp;&quot;topnav&quot;)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x.className&nbsp;+=&nbsp;&quot;&nbsp;responsive&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x.className&nbsp;=&nbsp;&quot;topnav&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+    <li>$('.smooth').on('click',&nbsp;function()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;$.smoothScroll({<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollElement:&nbsp;$('body'),<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollTarget:&nbsp;'#'&nbsp;+&nbsp;this.id<br/>&nbsp;&nbsp;&nbsp;&nbsp;});<br/>&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;<br/>});</li>
 </body>
+
 </html>
