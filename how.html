@@ -25,7 +25,7 @@
     </nav>
     <h2>How was this all made?</h2>
     <h4 id="top">That is a good question! This page will explain how I put this site together.</h4>
-    <p>This website has 5 pages: Home, About Me, What I've Learned, How It's Made, and More. The site is navigatable through the navigation bar at the top of the page.</p>
+    <p>This website has 5 pages: Home, About Me, What I've Learned, How It's Made, and More. The site is navigable through the navigation bar at the top of the page.</p>
 
     <h3>How the background was made: </h3>
     <ul>
@@ -77,10 +77,10 @@
     <h3>How the navigation bar was made:</h3>
     <ul>
         <li>
-            The first thing I did was create a seperate CSS spreadsheet for the navigation bar's styling.
+            The first thing I did was create a  CSS spreadsheet for the navigation bar's styling.
             <ul>
                 <li>
-                    I did this because I needed to link this CSS file to all of the pages and I didn't want to accidently carry over formatting from a different page. Additionally, I wanted to be able to clearly work on the navigation bar and having a seperate file meant
+                    I did this because I needed to link this CSS file to all of the pages and I didn't want to accidently carry over formatting from a different page. Additionally, I wanted to be able to clearly work on the navigation bar and having a separate file meant
                     that I knew that all of the CSS in that file correlated with the navigation bar.
                 </li>
             </ul>
@@ -94,7 +94,7 @@
             </ul>
         </li>
         <li>
-            I gave the entire divison the class of icon-bar, which I then utilized in the CSS document. The first thing that I did was give the entire div the background-color of Davy's Grey (#555).
+            I gave the entire division the class of icon-bar, which I then utilized in the CSS document. The first thing that I did was give the entire div the background-color of Davy's Grey (#555).
             <ul>
                 <li>
                     I chose this color because it was neutral, yet dark enough to be seen. I chose to use the class of icon-bar because that was the name of the element that I was working on.
@@ -102,7 +102,7 @@
             </ul>
         </li>
         <li>
-            The next thing that I did was I selected the anchors within the divison. I floated these to the left, center-aligned the text, gave each link a width of 20% of the page, gave them all a padding of 12px, added a transition of ease which lasts .3 seconds,
+            The next thing that I did was I selected the anchors within the division. I floated these to the left, center-aligned the text, gave each link a width of 20% of the page, gave them all a padding of 12px, added a transition of ease which lasts .3 seconds,
             made the text white, and changed the font size to 36px.
             <ul>
                 <li>
@@ -171,8 +171,8 @@
             </ul>
         </li>
         <li>
-            Next, I began adding the CSS. The first thing that I did was give the links background colors of blue and text colors of white. I padded them using 14 pixels and 20 pixels, and I aligned the text in the center. Then, I removed the text decoration and
-            I gave them the display property of inline-block.
+            Next, I began adding the CSS. The first thing that I did was give the links the background color of blue and the text color of white. I padded them using 14 pixels and 20 pixels, and I aligned the text in the center. Then, I removed the text decoration
+            and I gave them the display property of inline-block.
             <ul>
                 <li>
                     This gives each individual link the colors and the background. This was important because I wanted buttons, not just one massive blue color.
@@ -198,33 +198,63 @@
             </ul>
         </li>
         <li>
-           I realized that the buttons were now so close to each other than they looked like one big button. Therefore, I added breaks before and after each button. 
-           <ul>
-               <li>
-                   I chose to use two breaks in between each button because I thought that was the optimal spacing for my webpage.
-               </li>
-           </ul>
+            I realized that the buttons were now so close to each other than they looked like one big button. Therefore, I added breaks before and after each button.
+            <ul>
+                <li>
+                    I chose to use two breaks in between each button because I thought that was the optimal spacing for my webpage.
+                </li>
+            </ul>
         </li>
     </ul>
+    <img class="bottommargin" src="https://image.prntscr.com/image/Y-6j5TGkRpaDwVpg6JICIA.png" />
+    <img src="https://image.prntscr.com/image/aeHvs6ooRam-B1GCnPEbUQ.png" />
     <h3 class="rainbow2">How I made the rainbow animation:</h3>
-    <ul>
-        <li>
-            The first thing that I did was give a header the class of rainbow.
-            <ul>
-                <li>
-                    You can use any class name, but I chose to use rainbow because that was what my animation was.
-                </li>
-            </ul>
-        </li>
-        <li>
-            Then, I changed the font to be Open Sans, and I hooked up the animation. To do that, I stated the name of my animation, which was 'rainbow', changed the time of duration to be 1.5s, and I set it to run infinitely.
-            <ul>
-                <li>
-                    I picked the font that I did because it's easy to read and it's clean. I named my animation 'rainbow' because that is what it was, and I wanted a clear name. I chose the durawtion of 1.5 seconds after a lot of trial and errer, and I realized that 1.5 seconds would be fast enough for it look interesting, but slow enough for all the colors to be seen. I needed to set it to run infinitely because it needed to run forever.
-                </li>
-            </ul>
-        </li>
-    </ul>
+    <div class="rainbow2">
+        <ul>
+            <li>
+                The first thing that I did was give a header the class of rainbow.
+                <ul>
+                    <li>
+                        You can use any class name, but I chose to use rainbow because that was what my animation was.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Then, I changed the font to be Open Sans, and I hooked up the animation. To do that, I stated the name of my animation, which was 'rainbow', changed the time of duration to be 1.5s, and I set it to run infinitely.
+                <ul>
+                    <li>
+                        I picked the font that I did because it's easy to read and it's clean. I named my animation 'rainbow' because that is what it was, and I wanted a clear name. I chose the duration of 1.5 seconds after a lot of trial and error, and I realized that 1.5 seconds
+                        would be fast enough for it look interesting, but slow enough for all the colors to be seen. I needed to set it to run infinitely because it needed to run forever.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                The next thing that I set up was the animation itself. I set everything up by keyframes. Keyframing is the process of giving a specific value to an object at a specific point in time.
+                <ul>
+                    <li>
+                        I chose to use keyframes because it was the easiest way to make a cycling animation.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Then, I set up all of the colors. The first thing that I did was I decided on the percentage. I went with intervals of 20 percent.
+                <ul>
+                    <li>
+                        I originally wanted to split it into six parts, but six doesn't go into one hundred cleanly, so I was unable to get the percentages for a six part rainbow, so I decided to split it into five parts instead, omitting purple.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                The next thing that I did was I added one property-value pair to each percentage with the property of color in order to change the color of the text.
+                <ul>
+                    <li>
+                        For the first twenty percent, I went with red, and with the next set, I used orange. I followed the pattern with yellow, green, and blue.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <img src="https://image.prntscr.com/image/knTFa7z2QiiBYkQMS25S7w.png" />
+    </div>
 </body>
 
 </html>

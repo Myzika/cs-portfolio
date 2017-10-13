@@ -43,10 +43,7 @@ a:hover {
     font-family: 'Open Sans';
     animation: rainbow 1.5s infinite;
 }
-.rainbow2 {
-    font-family: 'Open Sans';
-    animation: rainbow 1.5s infinite;
-}
+
 
 @keyframes rainbow {
     20% {
@@ -63,5 +60,28 @@ a:hover {
     }
     100% {
         color: blue;
+    }
+}
+
+
+.rainbow2 {
+    font-family: 'Open Sans';
+    animation: rainbow2 1.5s infinite;
+}
+@keyframes rainbow2 {
+     20% {
+        color: red;
+    }
+    40% {
+        color: orange;
+    }
+    60% {
+        color: green;
+    }
+    80% {
+        color: blue;
+    }
+    100% {
+        color: purple;
     }
 }
