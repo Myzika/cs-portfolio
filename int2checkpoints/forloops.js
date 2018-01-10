@@ -1,4 +1,4 @@
-/* global draw ellipse rect p processing width height size */
+/* global draw ellipse rect p processing width height size background fill stroke*/
 var sketch = function(processing) {
     with(processing) {
         size(400, 400);
@@ -7,7 +7,6 @@ var sketch = function(processing) {
         var r = Math.random() * (230) + 25;
         var r2 = Math.random() * (200) + 55;
         var r3 = Math.random() * (100) + 100;
-        var g = 0
         draw = function() {
             /**
              * @event draws circles until x=400
@@ -15,10 +14,8 @@ var sketch = function(processing) {
              */
             for (var i = 0; i < 400; i += 35) {
                 for (var h = 20; h < 400; h += 40) {
-
                     if (h / 10 < 3) {
                         fill(r, 0, 0);
-
                     }
                     else if (h / 10 < 6.5) {
                         fill(0, 0, r2);
