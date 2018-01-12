@@ -45,14 +45,19 @@ var sketch = function(processing) {
         /** Creates the leaves for the trees */
         leaves = function() {
             noStroke();
-            fill(10, 71, 23);
+            fill(10, 71, 23, 400);
             ellipse(80, 400, 220, 130);
-            ellipse(120, 350, 100, 80)
-            fill(22, 73, 25);
+            fill(10,71,23,300);
+            ellipse(120, 350, 100, 80);
+            
+            //Little leaves, Tree 1
+            fill(0, 75, 25, 250);
             ellipse(30, 445, 70, 40);
-            fill(11, 66, 17);
+            
+            //Med. Leaves, Tree 1
+            fill(11, 68, 21, 240);
             ellipse(45, 330, 90, 80);
-            fill(0, 70, 9);
+            fill(0, 70, 9, 250);
             ellipse(140, 383, 120,80);
             
         };
