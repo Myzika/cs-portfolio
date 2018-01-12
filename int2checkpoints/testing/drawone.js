@@ -23,43 +23,52 @@ var sketch = function(processing) {
             curve(5, screen.height - 300, 73, 200 + d, 73, 80 + i, 15, 80 + i);
             fill(84, 56, 34);
             // noStroke();
-            triangle(80, screen.height -200, 30, 800, 130, 750);
+            triangle(80, screen.height - 200, 30, 800, 130, 750);
         };
 
         /** Draws thicker main branches and thinner branches */
         branches = function() {
-            //Main Branches
-            strokeWeight(6);
-            stroke(84, 56, 34);
-            triangle(67, 450, 67, 452, 30, 445);
-            triangle(70, 400, 70, 402, 130, 390);
-            triangle(30, 330, 30, 330, 70, 400);
+            tree1 = function() {
+                //Main Branches
+                strokeWeight(6);
+                stroke(84, 56, 34);
+                triangle(67, 450, 67, 452, 30, 445);
+                triangle(70, 400, 70, 402, 130, 390);
+                triangle(30, 330, 30, 330, 70, 400);
 
-            //Smaller Branches
-            strokeWeight(4);
-            triangle(128, 390, 140, 370, 140, 370);
-            triangle(128, 390, 150, 410, 150, 410);
-            line(60, 320, 54, 370);
+                //Smaller Branches
+                strokeWeight(4);
+                triangle(128, 390, 140, 370, 140, 370);
+                triangle(128, 390, 150, 410, 150, 410);
+                line(60, 320, 54, 370);
+            }
+            tree1();
         };
 
         /** Creates the leaves for the trees */
         leaves = function() {
             noStroke();
-            fill(10, 71, 23, 400);
-            ellipse(80, 400, 220, 130);
-            fill(10,71,23,300);
-            ellipse(120, 350, 100, 80);
-            
-            //Little leaves, Tree 1
-            fill(0, 75, 25, 250);
-            ellipse(30, 445, 70, 40);
-            
-            //Med. Leaves, Tree 1
-            fill(11, 68, 21, 240);
-            ellipse(45, 330, 90, 80);
-            fill(0, 70, 9, 250);
-            ellipse(140, 383, 120,80);
-            
+            tree1 = function() {
+                //Main Leaves, Tree 1
+                fill(10, 71, 23, 400);
+                ellipse(80, 400, 220, 130);
+                fill(10, 71, 23, 300);
+                ellipse(120, 350, 100, 80);
+
+                //Little leaves, Tree 1
+                fill(0, 75, 25, 250);
+                ellipse(30, 445, 70, 40);
+
+                //Med. Leaves, Tree 1
+                fill(11, 68, 21, 240);
+                ellipse(45, 330, 90, 80);
+
+                //Long Leaves, Tree 1
+                fill(0, 70, 9, 250);
+                ellipse(140, 383, 120, 80);
+            }
+
+            tree1();
         };
 
         /** Creates a gradient for the sky*/
@@ -85,6 +94,11 @@ var sketch = function(processing) {
                 b -= 2;
             }
         };
+
+        /** Creates the sun */
+        sun = function() {
+
+        }
 
         /** Makes the ground */
         ground = function() {
