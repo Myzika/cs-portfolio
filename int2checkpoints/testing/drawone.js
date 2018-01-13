@@ -68,7 +68,7 @@ var sketch = function(processing) {
                     for (var i = 0; i < screen.width; i += 50) {
                         noStroke();
                         fill(38, 34, 30);
-                        ellipse(i, screen.height - 80, 150, 200);
+                        ellipse(i, screen.height, 150, 200);
                     }
                 };
 
