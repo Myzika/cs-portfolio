@@ -1,17 +1,13 @@
 /* global draw ellipse rect p processing width height size */
 var sketch = function(processing) {
     with(processing) {
-        size(screen.width, screen.height);
+        size(screen.width-10, screen.height-16);
         // °º¤ø,¸¸,ø¤º°`°º¤ø Create Project Below This Line ø¤º°`°º¤ø,¸,ø¤°//
-        background(255);
+        background(0, 50, 100);
         var sunHeight = 0;
-        seesawAnimation = function() {
-            
-        };
         base = function() {
             /** Creates a seesaw */
             seesaw = function() {
-                var y = 20;
                 stroke(0);
                 strokeWeight(10);
                 fill(255);
@@ -20,7 +16,7 @@ var sketch = function(processing) {
                 line(470, 530 + 7, 460, 510 + 7); //Handle B
                 noStroke();
                 fill(0, 0, 255);
-                triangle(400 + 5, 580, 375 + 5, 630, 425 + 5, 630);
+                triangle(405, 580, 380, 630, 430, 630);
             };
 
             /** Creates a gradient for the sky */
@@ -468,6 +464,7 @@ var sketch = function(processing) {
         };
 
         draw = function() {
+            line(100, 200, 300, 400);
         };
 
         // °º¤ø,¸¸,ø¤º°`°º¤ø Create Project Above This Line ø¤º°`°º¤ø,¸,ø¤°//   
