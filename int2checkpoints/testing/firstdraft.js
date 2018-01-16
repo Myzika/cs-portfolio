@@ -28,7 +28,7 @@ var sketch = function(processing) {
                 ellipse(40+20, 20+10, 22, 22);
                 //fill(255);  //Debug
                 triangle(10+20, 25+10, 50+20, 25+10, 30+20, 50+10);
-            }
+            };
             
             drawFirst = function() {
             //Red

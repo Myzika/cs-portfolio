@@ -32,7 +32,7 @@ var sketch = function(processing) {
             midline = midline / 1.2;
             size--;
             pos = pos / 2;
-            fill(pur2)
+            fill(pur2);
             stroke(255, 0, 0);
             ellipse(pos1, pos1, size2, size2);
             fill(pur3);
