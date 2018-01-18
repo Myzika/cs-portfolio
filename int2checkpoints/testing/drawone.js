@@ -142,42 +142,7 @@ var sketch = function(processing) {
                 
                 /** Draws all of the tree trunks */
                 trunks = function() {
-                    tree1 = function() {
-                        var d = 200;
-                        var i = 600;
-                        var a;
-                        stroke(84, 56, 34);
-                        strokeWeight(20);
-                        noFill();
-                        curve(5, screen.height - 300, 73, 200 + d, 73, 80 + i, 15, 80 + i);
-                        fill(84, 56, 34);
-                        triangle(80, screen.height - 200, 30, 800, 130, 750);
-                    };
-                    tree2 = function() {
-                        var d = 200;
-                        var i = 600;
-                        var a;
-                        var move = 100;
-                        stroke(84, 56, 34);
-                        strokeWeight(20);
-                        noFill();
-                        curve(5 + move, screen.height - 300, 73 + move, 200 + d, 73 + move, 80 + i, 15 + move, 80 + i);
-                        fill(84, 56, 34);
-                        triangle(80 + move, screen.height - 200, 30 + move, 800, 130 + move, 750);
-                    };
-                    tree3 = function() {
-                        var d = 200;
-                        var i = 600;
-                        var move = screen.width - 100;
-                        stroke(84, 56, 34);
-                        strokeWeight(20);
-                        noFill();
-                        curve(5 + move, screen.height - 300, 73 + move, 400, 73 + move, 680, 15 + move, 80 + i);
-                        fill(84, 56, 34);
-                        triangle(80 + move, screen.height - 200, 30 + move, 800, 130 + move, 750);
-                    };
-                    
-                    tree4 = function() {
+                    tree = function() {
                         var d = 200;
                         var i = 600;
                         var a;
@@ -189,49 +154,13 @@ var sketch = function(processing) {
                         fill(84, 56, 34);
                         triangle(80 + move, screen.height - 200, 30 + move, 800, 130 + move, 750);
                     };
-                    tree5 = function() {
-                        var d = 200;
-                        var i = 600;
-                        var a;
-                        var move = screen.width - 380;
-                        stroke(84, 56, 34);
-                        strokeWeight(20);
-                        noFill();
-                        curve(5 + move, screen.height - 300, 73 + move, 200 + d, 73 + move, 80 + i, 15 + move, 80 + i);
-                        fill(84, 56, 34);
-                        triangle(80 + move, screen.height - 200, 30 + move, 800, 130 + move, 750);
-                    };
-                    tree6 = function() {
-                        var d = 200;
-                        var i = 600;
-                        var a;
-                        var move = screen.width - 300;
-                        stroke(84, 56, 34);
-                        strokeWeight(20);
-                        noFill();
-                        curve(5 + move, screen.height - 300, 73 + move, 200 + d, 73 + move, 80 + i, 15 + move, 80 + i);
-                        fill(84, 56, 34);
-                        triangle(80 + move, screen.height - 200, 30 + move, 800, 130 + move, 750);
-                    };
-                    tree7 = function() {
-                        var d = 200;
-                        var i = 600;
-                        var a;
-                        var move = screen.width - 500;
-                        stroke(84, 56, 34);
-                        strokeWeight(20);
-                        noFill();
-                        curve(5 + move, screen.height - 300, 73 + move, 200 + d, 73 + move, 80 + i, 15 + move, 80 + i);
-                        fill(84, 56, 34);
-                        triangle(80 + move, screen.height - 200, 30 + move, 800, 130 + move, 750);
-                    };
-                    tree1();
-                    tree2();
-                    tree3();
-                    tree4();
-                    tree5();
-                    tree6();
-                    tree7();
+                    tree();
+                    tree();
+                    tree();
+                    tree();
+                    tree();
+                    tree();
+                    tree();
                 };
 
                 // /** Draws thicker main branches and thinner branches */
