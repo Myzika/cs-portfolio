@@ -6,14 +6,23 @@ html {
 
 h2 {
     font-family: sans-serif;
+    text-align: left;
 }
 
 img {
     display: block;
     margin: auto;
 }
-
+p {
+    text-align: left;
+}
+body {
+    text-align: center;
+}
 .logo {
     display: inline-block;
-    
+    width: 40%;
+}
+.other {
+    display:inline-block;
 }

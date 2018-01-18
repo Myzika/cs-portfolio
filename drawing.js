@@ -98,25 +98,20 @@ var sketch = function(processing) {
 
             /** Creates a gradient for the sky */
             sky = function() {
-                //Color Variables for the sky
-                var r = 50;
-                var g = 60;
+                
+                /**Color Variables for the sky*/
+                var r = 30;
+                var g = 50;
                 var b = 110;
 
-                //The 'start' of the sky
-                noStroke();
-                fill(r, g, b);
-                rect(0, 0, screen.width, 25);
-
-                /**
-                 * Creates the gradient for the sky
-                 */
-                for (var y = 25; y < screen.height * 2; y += 25) {
+                /**Creates the gradient for the sky*/
+                for (var y = 0; y < screen.height * 2; y += 5) {
                     noStroke();
                     fill(r, g, b);
                     rect(0, y, screen.width, 25);
-                    g -= 2;
-                    b -= 2;
+                    // r-=.1;
+                    g --;
+                    b --;
                 }
             };
 
@@ -247,22 +242,7 @@ var sketch = function(processing) {
 
                 /** Draws thicker main branches and thinner branches */
                 branches = function() {
-                    tree1 = function() {
-                        //Main Branches
-                        strokeWeight(6);
-                        stroke(84, 56, 34);
-                        triangle(67, 430, 67, 432, 25, 428);
-                        triangle(70, 400, 70, 402, 130, 390);
-                        triangle(30, 330, 30, 330, 70, 400);
-
-                        //Smaller Branches
-                        strokeWeight(4);
-                        triangle(128, 390, 140, 370, 140, 370);
-                        triangle(128, 390, 150, 410, 150, 410);
-                        line(60, 320, 54, 370);
-                    };
-                    tree2 = function() {
-                        var move = 100;
+                    tree = function(move) {
                         //Main Branches
                         strokeWeight(6);
                         stroke(84, 56, 34);
@@ -276,134 +256,20 @@ var sketch = function(processing) {
                         triangle(128 + move, 390, 150 + move, 410, 150 + move, 410);
                         line(60 + move, 320, 54 + move, 370);
                     };
-                    tree3 = function() {
-                        var move = screen.width - 100;
-                        //Main Branches
-                        strokeWeight(6);
-                        stroke(84, 56, 34);
-                        triangle(67 + move, 430, 67 + move, 432, 25 + move, 428);
-                        triangle(70 + move, 400, 70 + move, 402, 130 + move, 390);
-                        triangle(30 + move, 330, 30 + move, 330, 70 + move, 400);
-
-                        //Smaller Branches
-                        strokeWeight(4);
-                        triangle(128 + move, 390, 140 + move, 370, 140 + move, 370);
-                        triangle(128 + move, 390, 150 + move, 410, 150 + move, 410);
-                        line(60 + move, 320, 54 + move, 370);
-                    };
-                    tree4 = function() {
-                        var move = screen.width - 220;
-                        //Main Branches
-                        strokeWeight(6);
-                        stroke(84, 56, 34);
-                        triangle(67 + move, 430, 67 + move, 432, 25 + move, 428);
-                        triangle(70 + move, 400, 70 + move, 402, 130 + move, 390);
-                        triangle(30 + move, 330, 30 + move, 330, 70 + move, 400);
-
-                        //Smaller Branches
-                        strokeWeight(4);
-                        triangle(128 + move, 390, 140 + move, 370, 140 + move, 370);
-                        triangle(128 + move, 390, 150 + move, 410, 150 + move, 410);
-                        line(60 + move, 320, 54 + move, 370);
-                    };
-                    tree5 = function() {
-                        var move = screen.width - 380;
-                        //Main Branches
-                        strokeWeight(6);
-                        stroke(84, 56, 34);
-                        triangle(67 + move, 430, 67 + move, 432, 25 + move, 428);
-                        triangle(70 + move, 400, 70 + move, 402, 130 + move, 390);
-                        triangle(30 + move, 330, 30 + move, 330, 70 + move, 400);
-
-                        //Smaller Branches
-                        strokeWeight(4);
-                        triangle(128 + move, 390, 140 + move, 370, 140 + move, 370);
-                        triangle(128 + move, 390, 150 + move, 410, 150 + move, 410);
-                        line(60 + move, 320, 54 + move, 370);
-                    };
-                    tree6 = function() {
-                        var move = screen.width - 300;
-                        //Main Branches
-                        strokeWeight(6);
-                        stroke(84, 56, 34);
-                        triangle(67 + move, 430, 67 + move, 432, 25 + move, 428);
-                        triangle(70 + move, 400, 70 + move, 402, 130 + move, 390);
-                        triangle(30 + move, 330, 30 + move, 330, 70 + move, 400);
-
-                        //Smaller Branches
-                        strokeWeight(4);
-                        triangle(128 + move, 390, 140 + move, 370, 140 + move, 370);
-                        triangle(128 + move, 390, 150 + move, 410, 150 + move, 410);
-                        line(60 + move, 320, 54 + move, 370);
-                    };
-                    tree7 = function() {
-                        var move = screen.width - 500;
-                        //Main Branches
-                        strokeWeight(6);
-                        stroke(84, 56, 34);
-                        triangle(67 + move, 430, 67 + move, 432, 25 + move, 428);
-                        triangle(70 + move, 400, 70 + move, 402, 130 + move, 390);
-                        triangle(30 + move, 330, 30 + move, 330, 70 + move, 400);
-
-                        //Smaller Branches
-                        strokeWeight(4);
-                        triangle(128 + move, 390, 140 + move, 370, 140 + move, 370);
-                        triangle(128 + move, 390, 150 + move, 410, 150 + move, 410);
-                        line(60 + move, 320, 54 + move, 370);
-                    };
-                    tree1();
-                    tree2();
-                    tree3();
-                    tree4();
-                    tree5();
-                    tree6();
-                    tree7();
+                    tree(0);
+                    tree(100);
+                    tree(screen.width - 100);
+                    tree(screen.width - 220);
+                    tree(screen.width - 380);
+                    tree(screen.width - 300);
+                    tree(screen.width - 500);
                 };
 
                 /** Creates the leaves for the trees */
                 leaves = function() {
                     noStroke();
-                    tree1 = function() {
-                        //Main Leaves, 
-                        fill(10, 71, 23, 400);
-                        ellipse(80, 400, 220, 130);
-                        fill(10, 71, 23, 300);
-                        ellipse(120, 350, 100, 80);
-
-                        //Little leaves, 
-                        fill(0, 75, 25, 250);
-                        ellipse(30, 445, 70, 40);
-
-                        //Med. Leaves, 
-                        fill(11, 68, 21, 240);
-                        ellipse(45, 330, 90, 80);
-
-                        //Long Leaves, 
-                        fill(0, 70, 9, 250);
-                        ellipse(140, 383, 120, 80);
-                    };
-                    tree2 = function() {
-                        var move = 50;
-                        //Main Leaves, 
-                        fill(10, 71, 23, 400);
-                        ellipse(80 + move, 400, 220 + move, 130);
-                        fill(10, 71, 23, 300);
-                        ellipse(120 + move, 350, 100 + move, 80);
-
-                        //Little leaves, 
-                        fill(0, 75, 25, 250);
-                        ellipse(30 + move, 445, 70 + move, 40);
-
-                        //Med. Leaves, 
-                        fill(11, 68, 21, 240);
-                        ellipse(45 + move, 330, 90 + move, 80);
-
-                        //Long Leaves, 
-                        fill(0, 70, 9, 250);
-                        ellipse(140 + move, 383, 120 + move, 80);
-                    };
-                    tree3 = function() {
-                        var move = screen.width - 100;
+                    tree = function(move) {
+                        // var move = screen.width - 100;
                         //Main Leaves, 
                         fill(10, 71, 23, 400);
                         ellipse(80 + move, 400, 220, 130);
@@ -422,93 +288,14 @@ var sketch = function(processing) {
                         fill(0, 70, 9, 250);
                         ellipse(140 + move, 383, 120, 80);
                     };
-                    tree4 = function() {
-                        var move = screen.width - 220;
-                        //Main Leaves, 
-                        fill(10, 71, 23, 400);
-                        ellipse(80 + move, 400, 220, 130);
-                        fill(10, 71, 23, 300);
-                        ellipse(120 + move, 350, 100, 80);
-
-                        //Little leaves, 
-                        fill(0, 75, 25, 250);
-                        ellipse(30 + move, 445, 70, 40);
-
-                        //Med. Leaves, 
-                        fill(11, 68, 21, 240);
-                        ellipse(45 + move, 330, 90, 80);
-
-                        //Long Leaves, 
-                        fill(0, 70, 9, 250);
-                        ellipse(140 + move, 383, 120, 80);
-                    };
-                    tree5 = function() {
-                        var move = screen.width - 370;
-                        //Main Leaves, 
-                        fill(10, 71, 23, 400);
-                        ellipse(80 + move, 400, 220, 130);
-                        fill(10, 71, 23, 300);
-                        ellipse(120 + move, 350, 100, 80);
-
-                        //Little leaves, 
-                        fill(0, 75, 25, 250);
-                        ellipse(30 + move, 445, 70, 40);
-
-                        //Med. Leaves, 
-                        fill(11, 68, 21, 240);
-                        ellipse(45 + move, 330, 90, 80);
-
-                        //Long Leaves, 
-                        fill(0, 70, 9, 250);
-                        ellipse(140 + move, 383, 120, 80);
-                    };
-                    tree6 = function() {
-                        var move = screen.width - 300;
-                        //Main Leaves, 
-                        fill(10, 71, 23, 400);
-                        ellipse(80 + move, 400, 220, 130);
-                        fill(10, 71, 23, 300);
-                        ellipse(120 + move, 350, 100, 80);
-
-                        //Little leaves, 
-                        fill(0, 75, 25, 250);
-                        ellipse(30 + move, 445, 70, 40);
-
-                        //Med. Leaves, 
-                        fill(11, 68, 21, 240);
-                        ellipse(45 + move, 330, 90, 80);
-
-                        //Long Leaves, 
-                        fill(0, 70, 9, 250);
-                        ellipse(140 + move, 383, 120, 80);
-                    };
-                    tree7 = function() {
-                        var move = screen.width - 500;
-                        //Main Leaves, 
-                        fill(10, 71, 23, 400);
-                        ellipse(80 + move, 400, 220, 130);
-                        fill(10, 71, 23, 300);
-                        ellipse(120 + move, 350, 100, 80);
-
-                        //Little leaves, 
-                        fill(0, 75, 25, 250);
-                        ellipse(30 + move, 445, 70, 40);
-
-                        //Med. Leaves, 
-                        fill(11, 68, 21, 240);
-                        ellipse(45 + move, 330, 90, 80);
-
-                        //Long Leaves, 
-                        fill(0, 70, 9, 250);
-                        ellipse(140 + move, 383, 120, 80);
-                    };
-                    tree1();
-                    tree2();
-                    tree3();
-                    tree4();
-                    tree5();
-                    tree6();
-                    tree7();
+                    tree(0);
+                    tree(20);
+                    tree(70);
+                    tree(screen.width-100)
+                    tree(screen.width-370);
+                    tree(screen.width-220);
+                    tree(screen.width-300);
+                    tree(screen.width-500);
                 };
 
                 /** Calling all of the functions */

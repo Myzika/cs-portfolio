@@ -14,18 +14,101 @@
 
     <body>
         <h2>How did I make my landscape?</h2>
-        <!--<img src="https://image.prntscr.com/image/Sif7PiDIRAWIIUzFb_8iOQ.png">-->
+        
+        <!--Explanation of Processing-->
         <img src="http://joeycadle.com/assets/images/upload/html5processingjs.png" width=700 />
         <p>
-            In this project, I used a JavaScript library called Processing.js. Processing.js is the sister project of Processing, a Java library. Both libraries were created for the purpose of creating and designing digital art using code.
+            In this project, I used a JavaScript library called Processing.js. Processing.js is the sister project of Processing, a 
+            Java library. Both libraries were created for the purpose of creating and designing digital art using code.
         </p>
+        
+        <!--How the environment was set up-->
         <img class="logo" src="https://ih1.redbubble.net/image.53566362.2862/flat,1000x1000,075,f.jpg" alt="Cloud9 Logo" width=300 />
         <img class="logo" src="http://resources.jetbrains.com/storage/products/webstorm/img/meta/webstorm_logo_300x300.png" alt="WebStorm Logo" width=200 />
         <p>
-            The first thing that was needed was to set up the Processing.js environment. Due to the limitations of chromebooks, we used C9, a freeware coding environment. I also set up a GitHub repository in order to have a backup in case something happened. This
-            repository also came in handy when I started working on this project at home. While c9 was definitely one of the best options for in-school work, I had better options when I was at home. When I worked at home, I used WebStorm, a JetBrains
-            product. I chose this particular IDE because I frequently used its Java counterpart, IntelliJ, and because it has build-in VCS support, meaning that it was easy to set up integration for GitHub, which therefore allowed me to work in school,
-            commit and push my code, and then pull if from home and continue work.
+            The first thing that was needed was to set up the Processing.js environment. Due to the limitations of chromebooks, 
+            we used C9, a freeware coding environment. I also set up a GitHub repository in order to have a backup in case something happened. This
+            repository also came in handy when I started working on this project at home. While c9 was definitely one of the best 
+            options for in-school work, I had better options when I was at home. When I worked at home, I used WebStorm, a JetBrains
+            product. I chose this particular IDE because I frequently used its Java counterpart, IntelliJ, and because it has 
+            built-in VCS support, meaning that it was easy to set up integration for GitHub, which therefore allowed me to work in school,
+            commit and push my code, and then pull it from home and continue work.
+        </p>
+        
+        <!--How I chose what I was going to make-->
+        <img class="logo" src="http://i.imgur.com/eVZoCyJ.png" alt="Minecraft Trees"/>
+        <img class="logo" src="http://d279m997dpfwgl.cloudfront.net/wp/2016/09/tree.jpg"></img>
+        <p>
+            Then, I had to approach the project. What was I going to make, and how was I going to make it? I was inspired by two 
+            different things The first thing is the Visual Arts class was working on making landscapes. This drew my interest, because I remembered 
+            doing that project last year. The second thing was that in Minecraft, for one of the servers that I develop for, the 
+            builders’ current project was to build dozens of trees. This was what made me truly decide to work on making a landscape. 
+        </p>
+        
+        <!--Organizational strategy-->
+        <img src="https://image.prntscr.com/image/EW5Yx897QIm6VSQz7mAYpw.png" alt="cs-portfolio/int2checkpoints/testing/"></img>
+        <p>
+            I first organized my workspace. Because I wanted to be able to change things and mess with things without breaking the 
+            entire project, I moved the Processing setup into a folder that I named ‘testing’. Here, I began to put the project together.
+        </p>
+        
+        <!--The ground-->
+        <img class="logo" src="https://image.prntscr.com/image/W5RFs9sHQXK9cgChyt4t6Q.png" alt="Lumpy Ground"></img>
+        <img class="logo" src="https://image.prntscr.com/image/5-r3Z8OcQGO-uW1wdUnDtA.png" alt="Code image"></img>
+        <p>
+            The first part of any landscape is the ground. I made a function specifically for the ground, calling it ground(). I 
+            decided that I wanted my ground to be slightly lumpy, and not completely straight. To do this, I first used a single 
+            ellipse shape to plot out the height and coordinates of the ground. An ellipse’s parameters are the x and y of its center,
+            and the length and height of the ellipse. After I figured out the height of the circle, I placed this code inside of a 
+            for loop, and inside of this for loop, I increased the x value each time it ran, creating a long stretch of circles along
+            the bottom of the page. After doing this, however, the circles were so close to each other that it looked like nothing 
+            more than just a straight line. Therefore, I changed the value of the incrementor to 50, which was a good level of spacing 
+            between the circles. At this point, the circles still had borders, so I got rid of the borders using the noStroke() function.
+        </p>
+        
+        <!--Tree Trunk-->
+        <img class="other" height=400px src="https://image.prntscr.com/image/67whleMaRSqeOwGU8F6Q6A.png" alt="tree with no ground"></img>
+        <img class="other" height=400px src="https://image.prntscr.com/image/0K472v8tSg_pnb8gmELXag.png" alt="tree with ground"></img>
+        <p>
+            After I finished the ground, I decided to start working on my trees. After looking at the structure of a tree, I decided 
+            that the best method of organization would be to separate the trees into different functions. As I started work on the 
+            first base tree, I noticed that it was quite difficult to tell line and shape apart, so I split up the code even more, 
+            separating the first tree into three parts: trunk, branches, and leaves. The first part of this tree that I tackled was 
+            the trunk. This would turn out to be the hardest part of the tree to complete due to its curved shape. After I got the 
+            very basic shape down, I used variables to fine-tune the numbers. Finally, I got rid of the fill, and increased the 
+            stroke weight. This was done because the trunk itself was a bezier curve, which is, essentially, a curved line. I called 
+            the ground function and took a look. The tree trunk still didn’t look quite right to me. I pulled up a picture of a tree, 
+            and looked closely. Then, I realized it was because my tree trunk stayed the same width the entire length of it. To fix 
+            this, I used a triangle to make the trunk taper downwards. 
+        </p>
+        
+        <!--Tree Branches-->
+        <img class="other" height=400px src="https://image.prntscr.com/image/4fl5DnRGSNm-tuMfdaYkTg.png" alt="Branches code"></img>
+        <img class="other" height=400px src="https://image.prntscr.com/image/0BKxXk43Tza8Lm5znuYV5g.png" alt="tree with no leaves"></img>
+        <p>
+            Then, I started working on the tree branches. The majority of the branches were made of triangles. While I could have 
+            used lines for all of the branches, the tapered shape that the triangles provided had a nicer, more branch-like look 
+            that I preferred. I split up the larger, main branches that connected to the trunk, and the smaller branches that built 
+            off of that.
+        </p>
+        
+        <!--Tree Leaves-->
+        <img class="other" alt="tree" src="https://image.prntscr.com/image/IMrxczMlTy_chHbsXSQ9AQ.png"></img>
+        <img class="other" src="https://image.prntscr.com/image/UQLQQDHOTgGbW0TsKNE3rQ.png" alt="tree code"></img>
+        <p>
+            After this, I began work on the foliage. I placed all of the leaves in a function called “leaves”. My leaves were long 
+            ellipses that centered around each main branch. After I did these main leaves, I noted that my tree still looked quite 
+            bare. To fix this, I centered two larger ellipses over the entire top of the trees, and I gave them a lower transparency. 
+            Then, I varied the shades of green for the leaves.
+        </p>
+        
+        <!--Tree duplication-->
+        
+        <img class="other" height=200px alt="tree code" src="https://image.prntscr.com/image/jtaf_hyJRE2dPEYGCmCb7w.png"></img>
+        <img class="other" height=200px src="https://image.prntscr.com/image/vxUz0BomQKWFOvolfgsToQ.png" alt="treeees"></img>
+        <p>
+            Finally, now having a finished tree, I copied the code several times, and I used variables to add trees in various other
+            areas. Each new tree had a function inside of their tree part.
         </p>
     </body>
 
