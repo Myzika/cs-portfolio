@@ -3,7 +3,7 @@ var sketch = function(processing) {
     with(processing) {
         size(screen.availWidth, screen.availHeight);
         // °º¤ø,¸¸,ø¤º°`°º¤ø Create Project Below This Line ø¤º°`°º¤ø,¸,ø¤°//
-        background(255);
+        background(200);
         var sunHeight = 0;
 
         /**
