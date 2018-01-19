@@ -85,7 +85,7 @@ var sketch = function(processing) {
         base = function() {
             /** Creates a seesaw */
             seesaw = function() {
-                stroke(0);
+                stroke(43, 15, 198);
                 strokeWeight(10);
 
                 //Main body
@@ -99,7 +99,7 @@ var sketch = function(processing) {
                 noStroke();
 
                 //Base
-                fill(0, 0, 255);
+                fill(76, 47, 0);
                 triangle(405, 580, 380, 630, 430, 630);
             };
 
@@ -195,6 +195,7 @@ var sketch = function(processing) {
                     tree(screen.width - 500);
 
                 };
+
                 /** Creates the leaves for the trees */
                 leaves = function() {
                     noStroke();
