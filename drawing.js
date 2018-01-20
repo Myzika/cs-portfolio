@@ -184,7 +184,6 @@ var sketch = function(processing) {
                 leaves = function() {
                     noStroke();
                     tree = function(move) {
-                        // var move = screen.width - 100;
                         //Main Leaves, 
                         fill(10, 71, 23, 400);
                         ellipse(80 + move, 400, 220, 130);
@@ -206,7 +205,7 @@ var sketch = function(processing) {
                     tree(0);
                     tree(20);
                     tree(70);
-                    tree(screen.width - 100)
+                    tree(screen.width - 100);
                     tree(screen.width - 370);
                     tree(screen.width - 220);
                     tree(screen.width - 300);
