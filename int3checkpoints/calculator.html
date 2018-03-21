@@ -7,7 +7,7 @@
     <title>Calculator</title>
 </head>
 <body>
-    <p>Basic Calculator</p>
+    <h1>Basic Calculator</h1>
     <input type="text" id="number1"/>
     <select id="operate">
         <option>+</option>
@@ -18,14 +18,12 @@
     </select>
     <input type="text" id="number2"/>
     <button id="submit">Calculate</button>
-    <div id="answer">Placeholder text</div>
-    <p>Quadratic Formula</p>
-    A <input type="text" id="a"/>
+    <div id="answer">Answer: </div>
+    <h1>Quadratic Formula</h1>
+    <input type="text" id="a"/>x^2 + <input type="text" id="b"/>x + <input type="text" id="c"/>
     <br />
-    B <input type="text" id="b"/>
-    <br />
-    C <input type="text" id="c"/>
-    <div id="factors"></div>
+    <button id="toFactor">Factor Me</button>
+    <div id="factors">Factors: </div>
     <script type="text/javascript" src="calculator.js"></script>
 </body>
 </html>
