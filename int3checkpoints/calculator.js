@@ -17,7 +17,7 @@ submit.addEventListener("click", calculateMe);
 
 /**
  * Function that does all of the matematical calculations for the basic calculator.
- * Nullchecks all possible inputs
+ * Null-checks all possible inputs
  */
 function calculateMe() {
     var num1 = parseInt(number1.value, 10);
@@ -61,7 +61,7 @@ function calculateMe() {
 
 /**
  * Function uses the quadratic formula in order to calculate the factors of a quadratic
- * Nullchecks all possible inputs.
+ * Null-checks all possible inputs.
  */
 function factorMe() {
     var numA = parseInt(a.value, 10);
