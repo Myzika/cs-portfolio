@@ -1,5 +1,5 @@
 //Sets an array of colors to the variable of colors.
-var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+var colors = ["red", "orange", "yellow", "lime", "blue", "indigo", "violet"];
 
 //Sets the variable i equal to one.
 var i = 1;
