@@ -9,6 +9,7 @@ code.addEventListener("mouseout", defaultText);
 brain.addEventListener("mouseover", brainText);
 brain.addEventListener("mouseout", defaultText);
 
+//Changes the text depending on the situation
 function brainText () {
     document.getElementById("text").innerHTML = "He enjoys studying psychology, and finds it fascinating how the mind works."
 }
