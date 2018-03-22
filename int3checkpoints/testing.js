@@ -1,24 +1,38 @@
+//Variables that store different HTML elements
 var search = document.getElementById("search");
 var answer = document.getElementById("answer");
 var lookFor = document.getElementById("lookFor");
 var years = document.getElementById("years");
 var go = document.getElementById("go");
 
+//Event listeners that call functions when buttons are clicked
 lookFor.addEventListener("click", potionSearch);
 go.addEventListener("click", yearSearch);
 
+/**
+ * Function that allows one to pull up a list of all the potions for a particular year
+ */
 function yearSearch() {
+    answer.style.color = "whitesmoke";
+    answer.style.fontFamily = "Georgia";
     var year = years.value;
     if (year === "Year 1") {
         answer.innerHTML = "Common Antidote, Boil Cure, Swifty Draught, Wiggenweld Potion, Essence of Dittany, Faiblesse Potion, Invigoration Draught";
     }
 }
 
+/**
+ * Function that checks to see if a searched potion matches one in the system.
+ */
 function potionSearch() {
+    //Temporarily takes the value, storing it in hold, and then converts it to lowercase
     var hold = search.value;
     var potion = hold.toLowerCase();
+    answer.style.color = "whitesmoke";
+    answer.style.fontFamily = "Georgia";
+    answer.innerHTML = "";
+    //The actual search
     if (potion === "common antidote") {
-        answer.innerHTML = "";
         distillTwo("powdered honey", "powdered bezoar", 4, "standard ingredient", 1, "water bottle");
         distillTwo("mint sprig", "standard ingredient", 2, "honey water", 1, "green common antidote");
         brewing("pinched unicorn horn", "blue common antidote");
@@ -26,7 +40,6 @@ function potionSearch() {
         end("common antidote");
     }
     else if (potion === "boil cure") {
-        answer.innerHTML = "";
         distillOne("powdered snake fang", 3, "pungous onions", "honey water");
         distillTwo("shrake powder", 1, "flobberworm mucus", 1, "standard ingredients", "yellow boil cure");
         distillTwo("distilling catalyst", 1, "porcupine quill", 1, "honey water", "orange boil cure");
@@ -34,7 +47,6 @@ function potionSearch() {
         end("boil cure");
     }
     else if (potion === "swifty draught") {
-        answer.innerHTML = "";
         brewing("salt", "water bottle");
         brewing("salt", "blue swifty draught");
         distillOne("salt", 2, "standard ingredient", "red swifty draught");
@@ -43,7 +55,6 @@ function potionSearch() {
         end("swifty draught");
     }
     else if (potion === "wiggenweld potion") {
-        answer.innerHTML = "";
         brewing("salamander blood", "water bottle");
         brewing("salamander blood", "red wiggenweld potion");
         brewing("salamander blood", "orange wiggenweld potion");
@@ -55,7 +66,6 @@ function potionSearch() {
         end("wiggenweld potion");
     }
     else if (potion === "blackfire") {
-        answer.innerHTML = "";
         distillTwo("salt", 3, "sliced bursting mushroom", 1, "distilling catalyst", "honey water");
         brewing("salamander blood", "blue blackfire potion");
         distillTwo("salamander blood", 2, "sliced bursting mushroom", 3, "distilling catalyst", "red blackfire potion");
@@ -64,7 +74,6 @@ function potionSearch() {
         end("blackfire potion");
     }
     else if (potion === "essence of dittany") {
-        answer.innerHTML = "";
         brewing("boom berry", "water");
         brewing("boom berry", "grey essence of dittany");
         distillTwo("boom berry", 2, "standard ingredient", 5, "dittany", "orange essence of dittany");
@@ -73,7 +82,6 @@ function potionSearch() {
         end("essence of dittany");
     }
     else if (potion === "faiblesse potion") {
-        answer.innerHTML = "";
         brewing("newt", "leech juice");
         distillTwo("newt", 1, "adder's fork", 1, "sloth brain", "base faiblesse potion");
         distillTwo("salamander blood", 3, "belladonna", 5, "doxy eggs", "light grey faiblesse potion");
@@ -82,17 +90,21 @@ function potionSearch() {
         distillTwo("powdered snake fang", 3, "sneezewort", 1, "leech juice", "orange faiblesse potion");
     }
     else if (potion === "invigoration draught") {
-        answer.innerHTML = "";
         brewing("powdered snake fang", "water bottle");
         distillThree("powdered snake fang", 1, "honey water", 2, "lavender", 1, "wolf's tooth", "grey invigoration draught");
         brewing("powdered snake fang", "pink invigoration draught");
         distillThree("powdered snake fang", 2, "bone", 3, "lavender", 2, "standard ingredient", "blue invigoration draught");
     }
     else {
+        answer.style.color = "red";
         answer.innerHTML = "Potion not found";
     }
 }
 
+/**
+ * Function to end a recipe.
+ * @param {string} potion - final potion's name
+ */
 function end(potion) {
     answer.innerHTML += "And that's the recipe for " + potion + ". ";
 }
