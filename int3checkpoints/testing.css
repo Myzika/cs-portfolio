@@ -1,3 +1,6 @@
 select {
     width: 25%;
 }
+html {
+    background-color: teal;
+}
