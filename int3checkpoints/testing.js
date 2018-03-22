@@ -9,15 +9,15 @@ go.addEventListener("click", yearSearch);
 
 function yearSearch() {
     var year = years.value;
-    if (year == "Year 1") {
-        answer.innerHTML = ["Common Antidote", " Boil Cure", " Swifty Draught", " Wiggenweld Potion"];
+    if (year === "Year 1") {
+        answer.innerHTML = ["Common Antidote", " Boil Cure", " Swifty Draught", " Wiggenweld Potion", "Essence of Dittany"];
     }
 }
 
 function potionSearch() {
     var hold = search.value;
     var potion = hold.toLowerCase();
-    if (potion == "common antidote") {
+    if (potion === "common antidote") {
         answer.innerHTML = "";
         distillTwo("powdered honey", "powdered bezoar", 4, "standard ingredient", 1, "water bottle");
         distillTwo("mint sprig", "standard ingredient", 2, "honey water", 1, "green common antidote");
@@ -25,7 +25,7 @@ function potionSearch() {
         distillOne("powdered honey", 2, "mistletoe berries", "yellow common antidote");
         end("common antidote");
     }
-    else if (potion == "boil cure") {
+    else if (potion === "boil cure") {
         answer.innerHTML = "";
         distillOne("powdered snake fang", 3, "pungous onions", "honey water");
         distillTwo("shrake powder", 1, "flobberworm mucus", 1, "standard ingredients", "yellow boil cure");
@@ -33,7 +33,7 @@ function potionSearch() {
         distillOne("powdered honey", 2, "shrake spine", "green boil cure");
         end("boil cure");
     }
-    else if (potion == "swifty draught") {
+    else if (potion === "swifty draught") {
         answer.innerHTML = "";
         brewing("salt", "water bottle");
         brewing("salt", "blue swifty draught");
@@ -42,7 +42,7 @@ function potionSearch() {
         brewing("salt", "purple swifty draught");
         end("swifty draught");
     }
-    else if (potion == "wiggenweld potion") {
+    else if (potion === "wiggenweld potion") {
         answer.innerHTML = "";
         brewing("salamander blood", "water bottle");
         brewing("salamander blood", "red wiggenweld potion");
@@ -54,9 +54,22 @@ function potionSearch() {
         brewing("salamander blood", "blue wiggenweld potion");
         end("wiggenweld potion");
     }
-    else if (potion == "blackfire") {
+    else if (potion === "blackfire") {
         answer.innerHTML = "";
         distillTwo("salt", 3, "sliced bursting mushroom", 1, "distilling catalyst", "honey water");
+        brewing("salamander blood", "blue blackfire potion");
+        distillTwo("salamander blood", 2, "sliced bursting mushroom", 3, "distilling catalyst", "red blackfire potion");
+        brewing("salamander blood", "green blackfire potion");
+        distillThree("salamander blood", 3, "fine wartcap powder", 1, "sliced bursting mushrooms", 2, "distilling catalyst", "grey blackfire potion");
+        end("blackfire potion");
+    }
+    else if (potion === "essence of dittany") {
+        brewing("boom berry", "water");
+        brewing("boom berry", "grey essence of dittany");
+        distillTwo("boom berry", 2, "standard ingredient", 5, "dittany", "orange essence of dittany");
+        distillTwo("boom berry", 1, "standard ingredient", 3, "dittany", "green essence of dittany");
+        brewing("dittany", "red essence of dittany");
+        end("essence of dittany");
     }
     else {
         answer.innerHTML = "Potion not found";
@@ -96,7 +109,7 @@ function distillOne(ingredient, one, a, base) {
  * @param {string} b - the ingredient in the second slot of the cauldron
  * @param {string} base - the potion/liquid at the bottom of the brewing stand
  */
-function distillTwo(ingredient, a, one, b, two, base) {
+function distillTwo(ingredient, one, a, two, b, base) {
     answer.innerHTML += "Put " + ingredient + " in the distiller along with " + base + " and put " + one + " " + a + " and " + two + " " + b + " in the cauldron. ";
 }
 
@@ -111,6 +124,6 @@ function distillTwo(ingredient, a, one, b, two, base) {
  * @param {string} c - the ingredient in the third slot of the cauldron
  * @param {string} base - the potion/liquid at the bottom of the brewing stand
  */
-function distillThree(ingredient, a, one, b, two, c, three, base) {
+function distillThree(ingredient, one, a, two, b, three, c, base) {
     answer.innerHTML += "Put " + ingredient + " in the distiller along with " + base + " and put " + one + " " + a + ", " + two + " " + b + ", and " + three + " " + c + " in the cauldron. ";
 }
