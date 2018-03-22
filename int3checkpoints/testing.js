@@ -10,7 +10,7 @@ go.addEventListener("click", yearSearch);
 function yearSearch() {
     var year = years.value;
     if (year === "Year 1") {
-        answer.innerHTML = ["Common Antidote", " Boil Cure", " Swifty Draught", " Wiggenweld Potion", "Essence of Dittany"];
+        answer.innerHTML = "Common Antidote, Boil Cure, Swifty Draught, Wiggenweld Potion, Essence of Dittany, Faiblesse Potion, Invigoration Draught";
     }
 }
 
@@ -64,12 +64,29 @@ function potionSearch() {
         end("blackfire potion");
     }
     else if (potion === "essence of dittany") {
+        answer.innerHTML = "";
         brewing("boom berry", "water");
         brewing("boom berry", "grey essence of dittany");
         distillTwo("boom berry", 2, "standard ingredient", 5, "dittany", "orange essence of dittany");
         distillTwo("boom berry", 1, "standard ingredient", 3, "dittany", "green essence of dittany");
         brewing("dittany", "red essence of dittany");
         end("essence of dittany");
+    }
+    else if (potion === "faiblesse potion") {
+        answer.innerHTML = "";
+        brewing("newt", "leech juice");
+        distillTwo("newt", 1, "adder's fork", 1, "sloth brain", "base faiblesse potion");
+        distillTwo("salamander blood", 3, "belladonna", 5, "doxy eggs", "light grey faiblesse potion");
+        distillTwo("newt", 1, "standard ingredient", 1, "honey water", "dark grey faiblesse potion");
+        distillTwo("newt", 4, "standard ingredient", 1, "honey water", "grey faiblesse potion");
+        distillTwo("powdered snake fang", 3, "sneezewort", 1, "leech juice", "orange faiblesse potion");
+    }
+    else if (potion === "invigoration draught") {
+        answer.innerHTML = "";
+        brewing("powdered snake fang", "water bottle");
+        distillThree("powdered snake fang", 1, "honey water", 2, "lavender", 1, "wolf's tooth", "grey invigoration draught");
+        brewing("powdered snake fang", "pink invigoration draught");
+        distillThree("powdered snake fang", 2, "bone", 3, "lavender", 2, "standard ingredient", "blue invigoration draught");
     }
     else {
         answer.innerHTML = "Potion not found";
