@@ -26,8 +26,9 @@ function yearSearch() {
  */
 function potionSearch() {
     //Temporarily takes the value, storing it in hold, and then converts it to lowercase
-    var hold = search.value;
-    var potion = hold.toLowerCase();
+    var potion = search.value
+        .toLowerCase()
+        .trim();
     answer.style.color = "whitesmoke";
     answer.style.fontFamily = "Georgia";
     answer.innerHTML = "";
@@ -96,8 +97,13 @@ function potionSearch() {
         distillThree("powdered snake fang", 2, "bone", 3, "lavender", 2, "standard ingredient", "blue invigoration draught");
     }
     else {
-        answer.style.color = "red";
-        answer.innerHTML = "Potion not found";
+        answer.style.color = "#9b0000";
+        if (!potion) {
+            answer.innerHTML = "Error: potionName cannot be null.";
+        }
+        else {
+            answer.innerHTML = "Error: " + potion + " not found";
+        }
     }
 }
 
