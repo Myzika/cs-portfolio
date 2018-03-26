@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +9,13 @@
     </head>
 
     <body>
-        <div id="head">Welcome to the Potions Database.</div>
-        <div class="description">You can either choose to use this visual interface that you see before you, or a text-based search using a command-line type search.</div>
-        <button id="term">Start a text-based terminal GUI.</button>
-        <br /> Enter the name of the potion you want to search for.
-        <br />
+        <div class="text" id="head">Welcome to the Potions Database.</div>
+        <button class="bgchanger" id="dark">Dark</button><button class="bgchanger" id="light">Light</button>
+        <div class="text" class="description">You can either choose to use this visual interface that you see before you, or a text-based search using a command-line type search.</div>
+        <br /> <div>Enter the name of the potion you want to search for.</div>
         <input title="Pick a potion" type="text" id="search" />
         <button id="lookFor">Search</button>
-        <br /> Or, optionally, you can use the dropdown below to see a list of all of the potions per each year.
+        <br /> <div class="text"> Or, optionally, you can use the dropdown below to see a list of all of the potions per each year. </div>
         <br />
         <select title="Pick a year" id="years">
             <option>Year 1</option>
@@ -29,6 +28,7 @@
         </select>
         <button id="go">Search</button>
         <p id="answer"></p>
+        <p id="error"></p>
         <script type="text/javascript" src="testing.js"></script>
     </body>
 </html>

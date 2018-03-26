@@ -4,10 +4,28 @@ var answer = document.getElementById("answer");
 var lookFor = document.getElementById("lookFor");
 var years = document.getElementById("years");
 var go = document.getElementById("go");
+var dark = document.getElementById("dark");
+var light = document.getElementById("light");
+var html = document.getElementById("html");
+var error = document.getElementById("error");
 
 //Event listeners that call functions when buttons are clicked
 lookFor.addEventListener("click", potionSearch);
 go.addEventListener("click", yearSearch);
+dark.addEventListener("click", changeDark);
+light.addEventListener("click", changeLight);
+
+function changeDark() {
+    document.body.style.color = "#107707"
+    answer.style.color = "#107707"
+    html.style.backgroundColor = "black";
+}
+
+function changeLight() {
+    html.style.backgroundColor = "#107896";
+    answer.style.color = "white";
+    document.body.style.color = "white";
+}
 
 /**
  * Function that allows one to pull up a list of all the potions for a particular year
@@ -29,9 +47,9 @@ function potionSearch() {
     var potion = search.value
         .toLowerCase()
         .trim();
-    answer.style.color = "whitesmoke";
     answer.style.fontFamily = "Georgia";
     answer.innerHTML = "";
+    error.innerHTML = "";
     //The actual search
     if (potion === "common antidote") {
         distillTwo("powdered honey", "powdered bezoar", 4, "standard ingredient", 1, "water bottle");
@@ -97,12 +115,12 @@ function potionSearch() {
         distillThree("powdered snake fang", 2, "bone", 3, "lavender", 2, "standard ingredient", "blue invigoration draught");
     }
     else {
-        answer.style.color = "#9b0000";
+        error.style.color = "#9b0000";
         if (!potion) {
-            answer.innerHTML = "Error: potionName cannot be null.";
+            error.innerHTML = "Error: potionName cannot be null.";
         }
         else {
-            answer.innerHTML = "Error: " + potion + " not found";
+            error.innerHTML = "Error: " + potion + " not found";
         }
     }
 }
