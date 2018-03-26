@@ -1,13 +1,13 @@
 //Variables that store different HTML elements
-var search = document.getElementById("search");
-var answer = document.getElementById("answer");
-var lookFor = document.getElementById("lookFor");
-var years = document.getElementById("years");
-var go = document.getElementById("go");
-var dark = document.getElementById("dark");
-var light = document.getElementById("light");
-var html = document.getElementById("html");
-var error = document.getElementById("error");
+var search = document.getElementById("search");     //The text box
+var answer = document.getElementById("answer");     //The div where the answer is printed
+var lookFor = document.getElementById("lookFor");   //The potions search button
+var years = document.getElementById("years");       //The dropdown selector for the year
+var go = document.getElementById("go");             //The year searcher button
+var dark = document.getElementById("dark");         //The dark button
+var light = document.getElementById("light");       //The light button
+var html = document.getElementById("html");         //The entire HTML page
+var error = document.getElementById("error");       //The div that displays any errors that the user input might have
 
 //Event listeners that call functions when buttons are clicked
 lookFor.addEventListener("click", potionSearch);
@@ -15,27 +15,53 @@ go.addEventListener("click", yearSearch);
 dark.addEventListener("click", changeDark);
 light.addEventListener("click", changeLight);
 
+/**
+ * Function that changes the color scheme to a black w/ dark green text.
+ */ 
 function changeDark() {
-    document.body.style.color = "#107707"
-    answer.style.color = "#107707"
+    document.body.style.color = "#107707";
+    answer.style.color = "#107707";
     html.style.backgroundColor = "black";
 }
 
+/**
+ * Function that changes the color scheme to a light blue w/ white text.
+ */ 
 function changeLight() {
     html.style.backgroundColor = "#107896";
-    answer.style.color = "white";
-    document.body.style.color = "white";
+    answer.style.color = "whitesmoke";
+    document.body.style.color = "whitesmoke";
 }
 
 /**
  * Function that allows one to pull up a list of all the potions for a particular year
  */
 function yearSearch() {
-    answer.style.color = "whitesmoke";
+    //Formatting
     answer.style.fontFamily = "Georgia";
+    //Stores the year value under the variable year
     var year = years.value;
+    //Checks for which year is selected and sends a list of potions that are searchable (if there are none: sends 'Not implemented').
     if (year === "Year 1") {
         answer.innerHTML = "Common Antidote, Boil Cure, Swifty Draught, Wiggenweld Potion, Essence of Dittany, Faiblesse Potion, Invigoration Draught";
+    }
+    else if (year === "Year 2") {
+        answer.innerHTML = "Confusing Draught, Bloodroot Potion, Bulgeye Potion, Laughing Potion, Murtlap Essence, Pepperup Potion, Pompion Potion";
+    }
+    else if (year === "Year 3") {
+        answer.innerHTML = "Not implemented";
+    }
+    else if (year === "Year 4") {
+        answer.innerHTML = "Not implemented";
+    }
+    else if (year === "Year 5") {
+        answer.innerHTML = "Not implemented";
+    }
+    else if (year === "Year 6") {
+        answer.innerHTML = "Not implemented";
+    }
+    else if (year === "Year 7") {
+        answer.innerHTML = "Not implemented";
     }
 }
 
@@ -44,9 +70,8 @@ function yearSearch() {
  */
 function potionSearch() {
     //Temporarily takes the value, storing it in hold, and then converts it to lowercase
-    var potion = search.value
-        .toLowerCase()
-        .trim();
+    var potion = search.value.toLowerCase().trim();
+    //Formatting
     answer.style.fontFamily = "Georgia";
     answer.innerHTML = "";
     error.innerHTML = "";
@@ -107,13 +132,78 @@ function potionSearch() {
         distillTwo("newt", 1, "standard ingredient", 1, "honey water", "dark grey faiblesse potion");
         distillTwo("newt", 4, "standard ingredient", 1, "honey water", "grey faiblesse potion");
         distillTwo("powdered snake fang", 3, "sneezewort", 1, "leech juice", "orange faiblesse potion");
+        end("faiblesse potion");
     }
     else if (potion === "invigoration draught") {
         brewing("powdered snake fang", "water bottle");
         distillThree("powdered snake fang", 1, "honey water", 2, "lavender", 1, "wolf's tooth", "grey invigoration draught");
         brewing("powdered snake fang", "pink invigoration draught");
         distillThree("powdered snake fang", 2, "bone", 3, "lavender", 2, "standard ingredient", "blue invigoration draught");
+        end("invigoration draught");
     }
+    else if (potion === "confusing draught") {
+        brewing("gulf", "water bottle");
+        distillTwo("gulf", 2, "scurvy grass", 6, "standard ingredient", "blue confusing draught");
+        distillTwo("gulf", 1, "sneezewort", 1, "standard ingredient", "green confusing draught");
+        distillOne("gulf", 3, "lionfish spine", "yellow confusing draught");
+        distillTwo("gulf", 2, "lionfish spine", 3, "flobberworm mucus", "orange confusing draught");
+        brewing("gulf", "red confusing draught");
+        end("confusing draught");
+    }
+    else if (potion === "bloodroot potion") {
+        brewing("powdered bloodroot", "honey water");
+        distillTwo("distilling catalyst", 4, "powdered bloodroot", 3, "standard ingredient", "orange bloodroot potion");
+        distillTwo("newt", 2, "powdered bloodroot", 3, "lavender", "red bloodroot potion");
+        brewing("newt", "yellow bloodroot potion");
+        distillTwo("newt", 5, "standard ingredient", 1, "foxglove tincture", "grey bloodroot potion");
+        brewing("powdered bloodroot", "incomplete bloodroot potion");
+        end("bloodroot potion");
+    }
+    else if (potion === "bulgeye potion") {
+        brewing("newt eye", "honey water");
+        brewing("pufferfish eye", "green bulgeye potion");
+        distillTwo("newt eye", 2, "beetle eye", 1, "honey water", "pale bulgeye potion");
+        distillThree("newt eye", 3, "beetle eye", 7, "standard ingredient", 1, "eel eye", "orange bulgeye potion");
+        distillTwo("eel eye", 3, "lavender", 2, "lemongrass", "red bulgeye potion");
+        brewing("mint sprig", "blue bulgeye potion");
+        distillTwo("crushed flitterby", 2, "pufferfish eye", 1, "eel eye", "light green bulgeye");
+        distillTwo("crushed flitterby", 3, "lavender", 2, "silverweed", "dark red bulgeye potion");
+        end("bulgeye potion");
+    }
+    else if (potion === "laughing potion") {
+        distillTwo("powdered honey", 3, "chopped alihotsy", 2, "standard ingredient", "water bottle");
+        distillTwo("distilling catalyst", 2, "chopped alihotsy", 1, "standard ingredient", "orange laughing potion");
+        brewing("crushed billywig wings", "green laughing potion");
+        distillTwo("distilling catalyst", 2, "chopped alihotsy", 3, "crushed billywig wings", "light grey laughing potion");
+        distillOne("crushed billywig wing", 3, "knarl quill", "blue laughing potion");
+        distillFive("crushed billywig wing", 3, "puffskein hair", 3, "puffskein hair",3, "puffskein hair", 3, "puffskein hair", 3, "puffskein hair", "grey laughing potion");
+        brewing("powdered horseradish", "red laughing potion");
+        end("laughing potion");
+    }
+    else if (potion === "murtlap essence") {
+        brewing("boom berry", "essence of dittany");
+        brewing("salamander blood", "grey murtlap essence");
+        distillTwo("boom berry", 2, "murtlap tentacle", 1, "crushed flitterby", "red murtlap essence");
+        brewing("boom berry", "pink essence of dittany");
+        distillThree("salamader blood", 2, "murtlap tentacle", 5, "dittany", 1, "murtlap tincture", "light green murtlap essence");
+        end("murtlap essence");
+    }
+    else if (potion === "pepperup potion") {
+        distillTwo("powdered honey", 2,"mandrake root", 1, "bicorn horn", "physical base");
+        brewing("salamander blood", "grey pepperup potion");
+        distillTwo("salamander blood", 3, "lavender", 1, "bicorn horn", "red pepperup potion");
+        brewing("mandrake root", "blue pepperup potion");
+    }
+    else if (potion === "pompion potion") {
+        brewing("crushed flitterby", "water bottle");
+        distillOne("powdered honey", 4, "crushed flitterby", "grey pompion potion");
+        distillTwo("distilling catalyst", 2, "fluxweed", 3, "standard ingredient", "green pompion potion");
+        distillTwo("distilling catalyst", 2, "fluxweed", 1, "bouncing bulb mixture", "light green pompion potion");
+        brewing("crushed flitterby", "red pompion potion");
+        distillTwo("newt", 3, "foxglove", 1, "foxglove tincture", "yellow pompion potion");
+        end("pompion potion");
+    }
+    //Null check + error message
     else {
         error.style.color = "#9b0000";
         if (!potion) {
@@ -179,4 +269,40 @@ function distillTwo(ingredient, one, a, two, b, base) {
  */
 function distillThree(ingredient, one, a, two, b, three, c, base) {
     answer.innerHTML += "Put " + ingredient + " in the distiller along with " + base + " and put " + one + " " + a + ", " + two + " " + b + ", and " + three + " " + c + " in the cauldron. ";
+}
+
+/**
+ * Function to write distilling steps with two ingredient in the cauldron
+ * @param {string} ingredient - the ingredient at the top of the brewing stand
+ * @param {number} one - the amount of an object in the first slot of the cauldron
+ * @param {string} a - the ingredient in the first slot of the cauldron
+ * @param {number} two - the amount of an object in the second slot of the cauldron
+ * @param {string} b - the ingredient in the second slot of the cauldron
+ * @param {number} three - the amount of an object in the third slot of the cauldron
+ * @param {string} c - the ingredient in the third slot of the cauldron
+ * @param {string} four - the amount of an object in the fourth slot of the cauldron
+ * @param {string} d - the ingredient in the fouth slot of the cauldron
+ * @param {string} base - the potion/liquid at the bottom of the brewing stand
+ */
+function distillFour(ingredient, one, a, two, b, three, c, four, d, base) {
+    answer.innerHTML += "Put " + ingredient + " in the distiller along with " + base + " and put " + one + " " + a + ", " + two + " " + b + ", " + three + " " + c + ", and " + four + " " + d + " in the cauldron. ";
+}
+
+/**
+ * Function to write distilling steps with two ingredient in the cauldron
+ * @param {string} ingredient - the ingredient at the top of the brewing stand
+ * @param {number} one - the amount of an object in the first slot of the cauldron
+ * @param {string} a - the ingredient in the first slot of the cauldron
+ * @param {number} two - the amount of an object in the second slot of the cauldron
+ * @param {string} b - the ingredient in the second slot of the cauldron
+ * @param {number} three - the amount of an object in the third slot of the cauldron
+ * @param {string} c - the ingredient in the third slot of the cauldron
+ * @param {string} four - the amount of an object in the fourth slot of the cauldron
+ * @param {string} d - the ingredient in the fouth slot of the cauldron
+ * @param {string} five - the amount of an object in the fifth slot of the cauldron
+ * @param {string} e - the ingredient in the fifth slot of the cauldron
+ * @param {string} base - the potion/liquid at the bottom of the brewing stand
+ */
+function distillFive(ingredient, one, a, two, b, three, c, four, d, five, e, base) {
+    answer.innerHTML += "Put " + ingredient + " in the distiller along with " + base + " and put " + one + " " + a + ", " + two + " " + b + ", " + three + " " + c + ", " + four + " " + d + ", and " + five + " " + e + " in the cauldron. ";
 }
