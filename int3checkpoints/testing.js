@@ -46,7 +46,7 @@ function yearSearch() {
         answer.innerHTML = "Common Antidote, Boil Cure, Swifty Draught, Wiggenweld Potion, Essence of Dittany, Faiblesse Potion, Invigoration Draught";
     }
     else if (year === "Year 2") {
-        answer.innerHTML = "Confusing Draught, Bloodroot Potion, Bulgeye Potion, Laughing Potion, Murtlap Essence, Pepperup Potion, Pompion Potion";
+        answer.innerHTML = "Confusing Draught, Bloodroot Potion, Bulgeye Potion, Laughing Potion, Murtlap Essence, Pepperup Potion, Pompion Potion, Strengthening Solution";
     }
     else if (year === "Year 3") {
         answer.innerHTML = "Not implemented";
@@ -202,6 +202,15 @@ function potionSearch() {
         brewing("crushed flitterby", "red pompion potion");
         distillTwo("newt", 3, "foxglove", 1, "foxglove tincture", "yellow pompion potion");
         end("pompion potion");
+    }
+    else if (potion === "strengthening solution") {
+        brewing("griffin claw", "physical base");
+        distillTwo("powdered snake fang", 5, "lavender", 1, "snake fang", "light grey strengthening solution");
+        brewing("salamander blood", "light blue strengthening solution");
+        distillThree("griffen claw", 3, "lavender", 1, "standard ingredient", 1, "snake fang", "grey strengthening solution");
+        distillFour("salamander blood", 3, "bone", 2, "lavender", 3, "standard ingredient", 1, "griffin claw", "red strengthening solution");
+        brewing("powdered snake fang", "unfinished strengthening solution");
+        end("strengthening solution");
     }
     //Null check + error message
     else {
