@@ -49,18 +49,9 @@ function yearSearch() {
         answer.innerHTML = "Confusing Draught, Bloodroot Potion, Bulgeye Potion, Laughing Potion, Murtlap Essence, Pepperup Potion, Pompion Potion, Strengthening Solution";
     }
     else if (year === "Year 3") {
-        answer.innerHTML = "Not implemented";
+        answer.innerHTML = "Babbling Beverage, Baneberry Potion, Chelidonium Miniscula, First Love Beguiling Bubbles";
     }
-    else if (year === "Year 4") {
-        answer.innerHTML = "Not implemented";
-    }
-    else if (year === "Year 5") {
-        answer.innerHTML = "Not implemented";
-    }
-    else if (year === "Year 6") {
-        answer.innerHTML = "Not implemented";
-    }
-    else if (year === "Year 7") {
+    else if (year === "Year 4" || year === "Year 5" || year === "Year 6" || year === "Year 7") {
         answer.innerHTML = "Not implemented";
     }
 }
@@ -211,6 +202,43 @@ function potionSearch() {
         distillFour("salamander blood", 3, "bone", 2, "lavender", 3, "standard ingredient", 1, "griffin claw", "red strengthening solution");
         brewing("powdered snake fang", "unfinished strengthening solution");
         end("strengthening solution");
+    }
+    else if (potion === "babbling beverage") {
+        distillTwo("crushed lovage", 5, "scurvy grass", 1, "honey water", "physical base");
+        distillFive("crushed lovage", 1, "doxy egg", 1, "doxy egg", 1, "doxy egg", 1, "doxy egg", 1, "doxy egg", "muddy brown babbling beverage");
+        brewing("sloth brain", "black babbling beverage");
+        brewing("crushed lovage", "dull red babbling beverage");
+        distillThree("distilling catalyst", 1, "adders fork", 5, "scurvy grass", 1, "foxglove tincture", "bright babbling beverage");
+        brewing("jobberknoll feather", "golden babbling beverage");
+        brewing("doxy egg", "yellow babbling beverage");
+        end("babbling beverage");
+    }
+    else if (potion === "baneberry potion") {
+        brewing("baneberry", "honey water");
+        distillTwo("bloodroot", 10, "standard ingrdient", 3, "baneberry", "orange baneberry potion");
+        distillOne("bloodroot", 3, "bloodroot", "pink baneberry potion");
+        distillTwo("mistletoe berry", 4, "peppermine powder", 1, "baneberry", "red baneberry potion");
+        brewing("salt", "grey baneberry potion");
+        distillTwo("baneberry", 2, "salt", 5, "baneberry", "silver baneberry potion");
+        distillOne("baneberry", 10, "salt", "red baneberry potion");
+        brewing("bloodroot", "deep red baneberry potion");
+        end("baneberry");
+    }
+    else if (potion === "chelidonium miniscula") {
+        brewing("poppy head", "light yellow chelidonium miniscula");
+        distillOne("poppy head", 2, "standard ingredient", "yellow chelidonium miniscula");
+        distillTwo("sneeze wort", 3, "scurvy grass", 5, "standard ingredient", 1, "brown chelidonium miniscula");
+        distillFour("poppy head", 1, "powdered lionfish spine", 1, "powdered lionfish spine", 1, "powdered lionfish spine", 1, "powdered lionfish spine", "green chelidonium miniscula");
+        brewing("poppy head", "grey chelidonium miniscula");
+        brewing("poppy head", "light yellow chelidonium miniscula");
+    }
+    else if (potion === "first love beguiling bubbles") {
+        distillTwo("powdered pearl", 2, "crushed lovage", 1, "moonstone", "love potion base");
+        brewing("cherry blossom", "yellow first love beguiling bubbles");
+        distillTwo("cherry blossom", 3, "rose thorns", 2, "ashwinder egg", "green first love beguiling bubbles");
+        distillThree("cherry blossom", 2, "rose thorns", 1, "ashwinder egg", 3, "crushed lovage", "blue first love beguiling bubbles");
+        distillOne("powdered moonstone", 1, "hair", "incomplete first love beguiling bubbles");
+        end("first love beguiling bubbles");
     }
     //Null check + error message
     else {
