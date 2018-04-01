@@ -19,8 +19,8 @@ light.addEventListener("click", changeLight);
  * Function that changes the color scheme to a black w/ dark green text.
  */ 
 function changeDark() {
-    document.body.style.color = "#107707";
-    answer.style.color = "#107707";
+    document.body.style.color = "#00FF00";
+    answer.style.color = "#00FF00";
     html.style.backgroundColor = "black";
 }
 
@@ -39,6 +39,7 @@ function changeLight() {
 function yearSearch() {
     //Formatting
     answer.style.fontFamily = "Georgia";
+    error.innerHTML = "";
     //Stores the year value under the variable year
     var year = years.value;
     //Checks for which year is selected and sends a list of potions that are searchable (if there are none: sends 'Not implemented').

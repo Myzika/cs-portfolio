@@ -82,9 +82,9 @@ function factorMe() {
     }
     else {
         factors.innerHTML = "Factors: ";
-        factors.innerHTML += (-1 * numB + Math.sqrt(Math.pow(numB, 2) - (4 * numA * numC))) / (2 * numA) * -1;
+        factors.innerHTML += (-1 * numB + Math.sqrt(Math.pow(numB, 2) - (4 * numA * numC))) / (2 * numA) ;
         factors.innerHTML += ", ";
-        factors.innerHTML += (-1 * numB - Math.sqrt(Math.pow(numB, 2) - (4 * numA * numC))) / (2 * numA) * -1;
+        factors.innerHTML += (-1 * numB - Math.sqrt(Math.pow(numB, 2) - (4 * numA * numC))) / (2 * numA);
         return;
     }
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="search.css">
+        <title>Potions Lookup</title>
+    </head>
+
+    <body>
+        <div class="text" id="head">Welcome to the Potions Database.</div>
+        <button class="bgchanger" id="dark">Dark</button>
+        <button class="bgchanger" id="light">Light</button>
+        <div>Enter the name of the potion you want to search for.</div>
+        <input title="Pick a potion" type="text" id="search" />
+        <button id="lookFor">Search</button>
+        <br /> 
+        <div class="text"> Or, optionally, you can use the dropdown below to see a list of all of the potions per each year. </div>        
+        <select title="Pick a year" id="years">
+            <option>Year 1</option>
+            <option>Year 2</option>
+            <option>Year 3</option>
+            <option>Year 4</option>
+            <option>Year 5</option>
+            <option>Year 6</option>
+            <option>Year 7</option>
+        </select>
+        <button id="go">Search</button>
+        <p id="answer"></p>
+        <p id="error"></p>
+        <script type="text/javascript" src="search.js"></script>
+    </body>
+</html>
+
+
+
