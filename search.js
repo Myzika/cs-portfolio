@@ -62,7 +62,9 @@ function yearSearch() {
  */
 function potionSearch() {
     //Temporarily takes the value, storing it in hold, and then converts it to lowercase
-    var potion = search.value.toLowerCase().trim();
+    var potion = search.value
+        .toLowerCase()
+        .trim();
     //Formatting
     answer.style.fontFamily = "Georgia";
     answer.innerHTML = "";
