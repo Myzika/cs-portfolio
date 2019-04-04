@@ -66,10 +66,10 @@ a:hover {
 
 .rainbow2 {
     font-family: 'Open Sans';
-    animation: rainbow2 1.5s infinite;
+    animation: rainbow2 2s infinite;
 }
 @keyframes rainbow2 {
-     20% {
+    20% {
         color: red;
     }
     40% {
